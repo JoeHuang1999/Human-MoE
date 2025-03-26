@@ -61,5 +61,7 @@ The final folder structure is as follows.
 └── lower-garment-refinement
 ```
 ## Coming Soon
-- [ ] Inference code and pretrained model
+- [ ] Implementation details
+- [ ] Pretrained models
+- [ ] Inference code
 - [ ] Training code

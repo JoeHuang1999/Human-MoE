@@ -1,0 +1,1056 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>HFHS-LDM</string>
+  </property>
+  <widget class="QPushButton" name="pushButton_load_parsing">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>20</y>
+     <width>125</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>125</width>
+     <height>25</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>Load Parsing</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_load_pose">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>60</y>
+     <width>125</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>125</width>
+     <height>25</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>Load Pose</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_save_output">
+   <property name="geometry">
+    <rect>
+     <x>465</x>
+     <y>60</y>
+     <width>125</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>125</width>
+     <height>25</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>Save Output</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_clear">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>100</y>
+     <width>125</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>125</width>
+     <height>25</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>Clear</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_save_parsing">
+   <property name="geometry">
+    <rect>
+     <x>465</x>
+     <y>100</y>
+     <width>125</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>125</width>
+     <height>25</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>Save Parsing</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_generate">
+   <property name="geometry">
+    <rect>
+     <x>465</x>
+     <y>22</y>
+     <width>125</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>125</width>
+     <height>25</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>Generate</string>
+   </property>
+  </widget>
+  <widget class="QGraphicsView" name="graphicsView_parsing">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>160</y>
+     <width>256</width>
+     <height>512</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>256</width>
+     <height>512</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QGraphicsView" name="graphicsView_pose">
+   <property name="geometry">
+    <rect>
+     <x>376</x>
+     <y>160</y>
+     <width>256</width>
+     <height>512</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>256</width>
+     <height>512</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QGraphicsView" name="graphicsView_output">
+   <property name="geometry">
+    <rect>
+     <x>652</x>
+     <y>160</y>
+     <width>256</width>
+     <height>512</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>256</width>
+     <height>512</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>50</y>
+     <width>300</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>300</width>
+     <height>75</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_text_discription">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>20</y>
+     <width>300</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>300</width>
+     <height>25</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>Text Discription</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>950</x>
+     <y>20</y>
+     <width>262</width>
+     <height>370</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_3">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <item>
+       <widget class="QPushButton" name="pushButton_top">
+        <property name="minimumSize">
+         <size>
+          <width>125</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Meiryo UI</family>
+          <pointsize>10</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>Top</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>color_blocks/class_top.png</normaloff>color_blocks/class_top.png</iconset>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_skin">
+        <property name="minimumSize">
+         <size>
+          <width>125</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei UI</family>
+          <pointsize>10</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Skin</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>color_blocks/class_skin.png</normaloff>color_blocks/class_skin.png</iconset>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_outer">
+        <property name="minimumSize">
+         <size>
+          <width>125</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei UI</family>
+          <pointsize>10</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Outer</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>color_blocks/class_outer.png</normaloff>color_blocks/class_outer.png</iconset>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_face">
+        <property name="minimumSize">
+         <size>
+          <width>125</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei UI</family>
+          <pointsize>10</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Face</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>color_blocks/class_face.png</normaloff>color_blocks/class_face.png</iconset>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_skirt">
+        <property name="minimumSize">
+         <size>
+          <width>125</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei UI</family>
+          <pointsize>10</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Skirt</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>color_blocks/class_skirt.png</normaloff>color_blocks/class_skirt.png</iconset>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_hair">
+        <property name="minimumSize">
+         <size>
+          <width>125</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei UI</family>
+          <pointsize>10</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Hair</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>color_blocks/class_hair.png</normaloff>color_blocks/class_hair.png</iconset>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_dress">
+        <property name="minimumSize">
+         <size>
+          <width>125</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei UI</family>
+          <pointsize>10</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Dress</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>color_blocks/class_dress.png</normaloff>color_blocks/class_dress.png</iconset>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_headwear">
+        <property name="minimumSize">
+         <size>
+          <width>125</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei UI</family>
+          <pointsize>10</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Headwear</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>color_blocks/class_headwear.png</normaloff>color_blocks/class_headwear.png</iconset>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_pants">
+        <property name="minimumSize">
+         <size>
+          <width>125</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei UI</family>
+          <pointsize>10</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Pants</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>color_blocks/class_pants.png</normaloff>color_blocks/class_pants.png</iconset>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_eyeglass">
+        <property name="minimumSize">
+         <size>
+          <width>125</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei UI</family>
+          <pointsize>10</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Eyeglass</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>color_blocks/class_eyeglass.png</normaloff>color_blocks/class_eyeglass.png</iconset>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_rompers">
+        <property name="minimumSize">
+         <size>
+          <width>125</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei UI</family>
+          <pointsize>10</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Rompers</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>color_blocks/class_rompers.png</normaloff>color_blocks/class_rompers.png</iconset>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_footwear">
+        <property name="minimumSize">
+         <size>
+          <width>125</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei UI</family>
+          <pointsize>10</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Footwear</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>color_blocks/class_footwear.png</normaloff>color_blocks/class_footwear.png</iconset>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_5">
+      <item>
+       <widget class="QPushButton" name="pushButton_leggings">
+        <property name="minimumSize">
+         <size>
+          <width>125</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei UI</family>
+          <pointsize>10</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Leggings</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>color_blocks/class_leggings.png</normaloff>color_blocks/class_leggings.png</iconset>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_ring">
+        <property name="minimumSize">
+         <size>
+          <width>125</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei UI</family>
+          <pointsize>10</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Ring</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>color_blocks/class_ring.png</normaloff>color_blocks/class_ring.png</iconset>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_belt">
+        <property name="minimumSize">
+         <size>
+          <width>125</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei UI</family>
+          <pointsize>10</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Belt</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>color_blocks/class_belt.png</normaloff>color_blocks/class_belt.png</iconset>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_neckwear">
+        <property name="minimumSize">
+         <size>
+          <width>125</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei UI</family>
+          <pointsize>10</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Neckwear</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>color_blocks/class_neckwear.png</normaloff>color_blocks/class_neckwear.png</iconset>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_wristwear">
+        <property name="minimumSize">
+         <size>
+          <width>125</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei UI</family>
+          <pointsize>10</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Wristwear</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>color_blocks/class_wrist.png</normaloff>color_blocks/class_wrist.png</iconset>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_socks">
+        <property name="minimumSize">
+         <size>
+          <width>125</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei UI</family>
+          <pointsize>10</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Socks</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>color_blocks/class_socks.png</normaloff>color_blocks/class_socks.png</iconset>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_tie">
+        <property name="minimumSize">
+         <size>
+          <width>125</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei UI</family>
+          <pointsize>10</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Tie</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>color_blocks/class_tie.png</normaloff>color_blocks/class_tie.png</iconset>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_necklace">
+        <property name="minimumSize">
+         <size>
+          <width>125</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei UI</family>
+          <pointsize>10</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Necklace</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>color_blocks/class_necklace.png</normaloff>color_blocks/class_necklace.png</iconset>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_earrings">
+        <property name="minimumSize">
+         <size>
+          <width>125</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei UI</family>
+          <pointsize>10</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Earrings</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>color_blocks/class_earstuds.png</normaloff>color_blocks/class_earstuds.png</iconset>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_bag">
+        <property name="minimumSize">
+         <size>
+          <width>125</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei UI</family>
+          <pointsize>10</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Bag</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>color_blocks/class_bag.png</normaloff>color_blocks/class_bag.png</iconset>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_gloves">
+        <property name="minimumSize">
+         <size>
+          <width>125</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei UI</family>
+          <pointsize>10</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Gloves</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>color_blocks/class_glove.png</normaloff>color_blocks/class_glove.png</iconset>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_background">
+        <property name="minimumSize">
+         <size>
+          <width>125</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei UI</family>
+          <pointsize>10</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Background</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>color_blocks/class_bg.png</normaloff>color_blocks/class_bg.png</iconset>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>20</y>
+     <width>100</width>
+     <height>100</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>logo.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

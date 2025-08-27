@@ -60,8 +60,10 @@ The final folder structure is as follows.
 ├── upper-garment-refinement
 └── lower-garment-refinement
 ```
+## Pretrained models
+We provide pre-trained models for convenience. You can download them from the following link: https://drive.google.com/drive/folders/1VlOBth8SlnolHoqwcWIwK0cxwiNlSKkY?usp=sharing
+
 ## Coming Soon
-- [ ] Implementation details
-- [ ] Pretrained models
 - [ ] Inference code
 - [ ] Training code
+

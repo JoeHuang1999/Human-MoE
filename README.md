@@ -112,7 +112,8 @@ python train_vqvae.py
 ```
 python train_ddpm_cond_deepfashion.py
 ```
-These commands demonstrate the standard full-body training pipelines for both the autoencoder and the LDM. If you need to train models for other regions (e.g., face, hand, upper garment, lower garment), simply modify the dataset class and configuration file inside ```train_vqvae.py``` or ```train_ddpm_cond_deepfashion.py```. The training procedure and logic remain the same; only the dataset and configuration differ.
+These commands illustrate the standard full-body training pipelines for both the autoencoder and the LDM. To train on other regions (e.g., face, hand, upper garment, lower garment) or for inpainting, simply adjust the dataset class and configuration file in `train_vqvae.py` or `train_ddpm_cond_deepfashion.py`. The overall training logic remains the same; only the dataset and config differ. Reference configuration files can be found in `src/config/`.
+
 
 
 

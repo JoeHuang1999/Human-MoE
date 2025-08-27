@@ -101,19 +101,6 @@ python ldm_sample_folder_upper_garment.py
 python ldm_sample_folder_inpainting_nn.py
 ```
 
-## Training
-The training process can be divided into two major steps: **training the autoencoder** and **training the LDM**.
-First, navigate to the ```./src/tools``` directory.
-### 1. Autoencoder (VQ-VAE)
-```
-python train_vqvae.py
-```
-### 2. LDM
-```
-python train_ddpm_cond_deepfashion.py
-```
-These commands illustrate the standard full-body training pipelines for both the autoencoder and the LDM. To train on other regions (e.g., face, hand, upper garment, lower garment) or for inpainting, simply adjust the dataset class and configuration file in `train_vqvae.py` or `train_ddpm_cond_deepfashion.py`. The overall training logic remains the same; only the dataset and config differ. Reference configuration files can be found in `src/config/`.
-
 
 
 

@@ -61,7 +61,7 @@ The final folder structure is as follows.
 └── lower-garment-refinement
 ```
 ## Pre-trained Weights
-We provide pre-trained weights for convenience. You can download them from [Google Drive](https://drive.google.com/drive/folders/1VlOBth8SlnolHoqwcWIwK0cxwiNlSKkY?usp=sharing). After downloading, please place the weights into ```./src```
+We provide pre-trained weights for convenience. You can download them from [Google Drive](https://drive.google.com/drive/folders/1VlOBth8SlnolHoqwcWIwK0cxwiNlSKkY?usp=sharing). After downloading, please place the weights into ```./src```.
 
 ## Inference
 We provide a simple GUI for running inference with the pre-trained model.  
@@ -112,6 +112,7 @@ python train_vqvae.py
 python train_ddpm_cond_deepfashion.py
 ```
 These commands demonstrate the standard full-body training pipelines for both the autoencoder and the LDM. If you need to train models for other regions (e.g., face, hand, upper garment, lower garment), simply modify the dataset class and configuration file inside ```train_vqvae.py``` or ```train_ddpm_cond_deepfashion.py```. The training procedure and logic remain the same; only the dataset and configuration differ.
+
 
 
 

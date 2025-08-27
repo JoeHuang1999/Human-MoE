@@ -60,10 +60,48 @@ The final folder structure is as follows.
 ├── upper-garment-refinement
 └── lower-garment-refinement
 ```
-## Pretrained models
-We provide pre-trained models for convenience. You can download them from the following link: https://drive.google.com/drive/folders/1VlOBth8SlnolHoqwcWIwK0cxwiNlSKkY?usp=sharing
+## Pre-trained Weights
+We provide pre-trained weights for convenience.  
+You can download them from the following link:  
+[Google Drive](https://drive.google.com/drive/folders/1VlOBth8SlnolHoqwcWIwK0cxwiNlSKkY?usp=sharing)
+After downloading, please place the weights into ```./src```
 
-## Coming Soon
-- [ ] Inference code
-- [ ] Training code
+## Inference
+We provide a simple GUI for running inference with the pre-trained model.  
+
+### Running the Demo
+Execute the following command to launch the GUI and generate results:
+```
+python ui_demo.py
+```
+After running the command, you will see the following user interface.
+<img width="1600" height="900" alt="使用者介面完整版" src="https://github.com/user-attachments/assets/b4a5e2ea-6ea4-4093-b1b7-a8d7bbb688f9" />
+The output will be saved at ```./HumanMoE/src/deepfashion/cond_text_image_samples/result.png```
+You can further enhance the generated results by sequentially running the refinement commands:
+```
+python ui_refine_face.py
+python ui_refine_hand.py
+python ui_refine_upper_garment.py
+python ui_refine_lower_garment.py
+```
+### Batch Sampling
+#### Full-body image generation
+```
+python ldm_sample_folder.py
+```
+#### Part-specific image generation
+```
+python ldm_sample_folder_face.py
+python ldm_sample_folder_hand.py
+python ldm_sample_folder_lower_garment.py
+python ldm_sample_folder_upper_garment.py
+```
+#### Full-body image inpainting
+```
+python ldm_sample_folder_inpainting_nn.py
+```
+
+## Training
+
+
 

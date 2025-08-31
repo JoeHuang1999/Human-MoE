@@ -10,16 +10,18 @@ from PySide6.QtGui import QPainter, QPixmap, QPen, QColor, QBrush, QImage
 from demo import Ui_Form
 
 
+import os
+import shutil
 import numpy as np
 from PIL import Image, ImageQt
 import torch
 import cv2
 from src.funcs import ldm_sample_folder
 from src.funcs.ldm_sample_folder import run
-from src.postprocess import seamless_clone_face
-from src.postprocess.seamless_clone_face import run_seamless_clone_face
-from src.postprocess import seamless_clone_hand
-from src.postprocess.seamless_clone_hand import run_seamless_clone_hand
+from src.postprocess import edge_refinement_face
+from src.postprocess.edge_refinement_face import run_edge_refinement_face
+from src.postprocess import edge_refinement_hand
+from src.postprocess.edge_refinement_hand import run_edge_refinement_hand
 
 palette = [
     (0, 0, 0),
@@ -228,16 +230,43 @@ class MainWindow(QWidget, Ui_Form):
 			self.pose = Image.open(fileName)
 
 	def generate(self):
+		# Check if model files exist in the correct location
+		model_path = "./deepfashion/ddpm_ckpt_text_image_cond_clip.pth"
+		vae_path = "./deepfashion/vqvae_autoencoder_ckpt.pth"
+		
+		if not os.path.exists(model_path):
+			QMessageBox.warning(self, "Error", f"Model file not found: {model_path}")
+			return
+		if not os.path.exists(vae_path):
+			QMessageBox.warning(self, "Error", f"VAE file not found: {vae_path}")
+			return
+			
+		# Create symbolic links or copy files to expected location
+		expected_model_path = "./src/deepfashion/ddpm_ckpt_text_image_cond_clip.pth"
+		expected_vae_path = "./src/deepfashion/vqvae_autoencoder_ckpt.pth"
+		
+		if not os.path.exists(expected_model_path):
+			os.makedirs("./src/deepfashion", exist_ok=True)
+			# Copy model files to expected location
+			shutil.copy2(model_path, expected_model_path)
+			shutil.copy2(vae_path, expected_vae_path)
+		
 		self.auto_save_parsing()
 		self.auto_save_pose()
 		self.auto_save_text()
 		self.model, self.vae = run(self.model, self.vae)
 		scene = QGraphicsScene()
-		image = QPixmap(f"./src/deepfashion/cond_text_image_samples/result.png")
-		image = image.scaled(256, 512)
-		scene.setSceneRect(0, 0, 256, 512)
-		scene.addPixmap(image)
-		self.graphicsView_output.setScene(scene)
+		
+		# Check if result file exists
+		result_path = f"./src/deepfashion/cond_text_image_samples/result.png"
+		if os.path.exists(result_path):
+			image = QPixmap(result_path)
+			image = image.scaled(256, 512)
+			scene.setSceneRect(0, 0, 256, 512)
+			scene.addPixmap(image)
+			self.graphicsView_output.setScene(scene)
+		else:
+			QMessageBox.warning(self, "Error", f"Generated result file does not exist: {result_path}")
 
 	def save_output(self):
 		fileName, _ = QFileDialog.getSaveFileName(self, "Save Image", "", "PNG Files (*.png);;All Files (*)")
@@ -284,6 +313,9 @@ class MainWindow(QWidget, Ui_Form):
 			QMessageBox.information(self, "Save Image", "Image saved successfully.")
 
 	def auto_save_parsing(self):
+		# Ensure directory exists
+		os.makedirs("./src/deepfashion/cond_text_image_samples", exist_ok=True)
+		
 		self.parsing = np.array(self.parsing)
 		for i in range(24):
 			self.parsing = self.make_mask(self.parsing, self.graphicsView_parsing.scene().mask_points[i], self.graphicsView_parsing.scene().size_points[i], palette[i])
@@ -300,9 +332,15 @@ class MainWindow(QWidget, Ui_Form):
 		index_image.resize((512, 1024)).save(f"./src/deepfashion/cond_text_image_samples/parsing.png")
 
 	def auto_save_pose(self):
+		# Ensure directory exists
+		os.makedirs("./src/deepfashion/cond_text_image_samples", exist_ok=True)
+		
 		self.pose.save(f"./src/deepfashion/cond_text_image_samples/pose.png")
 
 	def auto_save_text(self):
+		# Ensure directory exists
+		os.makedirs("./src/deepfashion/cond_text_image_samples", exist_ok=True)
+		
 		self.text = self.lineEdit.text()
 		with open(f"./src/deepfashion/cond_text_image_samples/text.txt", "w") as file:
 			file.write(self.text)
